@@ -41,6 +41,7 @@ Mobile version
 ### Built with
 
 - Semantic HTML5 markup
+- First time implementing Sass
 - CSS custom properties
 - CSS Flexbox
 - CSS Grid
