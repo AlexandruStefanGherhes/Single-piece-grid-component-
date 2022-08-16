@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-size: 15px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-family: "League Spartan", sans-serif;
+}
+
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+
+body {
+  font-family: "Karla";
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background: $Light-Gray;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 320px;
+  max-width: 85%;
+  margin: 70px 0;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.card-community {
+  background: white;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+
+  &__title {
+    font-size: 22px;
+    font-family: "Karla";
+    color: $Cyan;
+    padding-bottom: 20px;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    font-family: "Karla";
+    color: $Bright-Yellow;
+    font-size: 17px;
+    padding-bottom: 20px;
+  }
+
+  &__description {
+    font-family: "Karla";
+    color: $Grayish-Blue;
+    line-height: 1.6;
+    font-size: inherit;
+    padding-bottom: 20px;
+  }
+}
+
+.card-subscription {
+  background: $Cyan;
+  padding: 20px;
+
+  &__title {
+    font-size: 22px;
+    color: white;
+    padding-bottom: 20px;
+    font-family: "Karla";
+  }
+
+  &__subtitle {
+    font-family: "Karla";
+    display: flex;
+    gap: 7px;
+    color: white;
+    font-size: 28px;
+    padding-bottom: 20px;
+  }
+
+  &__subtitle_span {
+    margin-top: 7px;
+    font-size: 15px;
+    color: $Light-Gray;
+    font-weight: 100;
+  }
+
+  &__description {
+    font-family: "Karla";
+    color: white;
+    line-height: 1.6;
+    font-size: inherit;
+    padding-bottom: 20px;
+  }
+
+  &__button {
+    border: none;
+    font-weight: 700;
+    background: $Bright-Yellow;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: white;
+    width: 100%;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &:hover {
+      background-color: none;
+    }
+  }
+}
+
+.card-aboutUs {
+  background: #4abebd;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+
+  &__title {
+    font-size: 22px;
+    font-family: "Karla";
+    color: white;
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+
+  &__description {
+    color: $Light-Gray;
+    line-height: 1.6;
+    font-family: "Karla";
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card {
+    grid-template-rows: 230px 280px;
+    grid-template-columns: 350px 350px;
+    grid-template-areas:
+      "community  community"
+      "subscription aboutUs";
+  }
+
+  .card-community {
+    grid-area: community;
+    padding: 40px;
+
+    &__description {
+      width: 90%;
+    }
+  }
+
+  .card-subscription {
+    padding: 40px;
+    border-radius: 0 0 0 10px;
+
+    &__card-description {
+      margin-top: -5px;
+    }
+  }
+
+  .card-aboutUs {
+    padding: 40px;
+    border-radius: 0 0 10px 0;
+
+    &__description {
+      line-height: 1.4;
+    }
+  }
+}
