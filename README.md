@@ -34,7 +34,7 @@ Mobile version
 ### Links
 
 - Solution URL: [Code on GitHub](https://github.com/AlexandruStefanGherhes/Single-piece-grid-component-.git)
-- Live Site URL: [GitHub Pages Live URL](https://alexandrustefangherhes.github.io/Four-card-feature-section-master/)
+- Live Site URL: [GitHub Pages Live URL](https://alexandrustefangherhes.github.io/Single-piece-grid-component-/)
 
 ## My process
 
